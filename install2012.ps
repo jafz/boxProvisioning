@@ -1,7 +1,6 @@
 # to run, execute this in an elevated ps cmd prompt:
 # set-executionpolicy unrestricted -force
-# (new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/install2012.ps1','c:\loc
-al.ps1')
+# (new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/install2012.ps1','c:\local.ps1')
 
 . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
 Enable-RemoteDesktop

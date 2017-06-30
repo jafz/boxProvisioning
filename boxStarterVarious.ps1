@@ -21,6 +21,7 @@ cinst postman
 #Browsers
 cinst googlechrome
 cinst firefox
+cinst thunderbird
 
 #Other essential tools
 cinst 7zip
@@ -34,3 +35,7 @@ cinst greenshot
 
 # brutal-dev .net assembly strong namer missing
 # samuel attard google music player
+
+cinst Microsoft-Hyper-V-All -source windowsFeatures
+cinst Microsoft-Windows-HyperV-Guest-Package -source windowsFeatures
+cinst Microsoft-Windows-Subsystem-Linux -source windowsFeatures

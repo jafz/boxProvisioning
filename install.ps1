@@ -6,6 +6,10 @@
 Enable-RemoteDesktop
 netsh advfirewall firewall add rule name="Remote Desktop" dir=in localport=3389 protocol=TCP action=allow
 
+# delete on ondrive setup which is automatically installing itself
+Reg delete HKEY_USERS\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Run\ /v OneDriveSetup /f
+Reg delete HKEY_USERS\S-1-5-20\Software\Microsoft\Windows\CurrentVersion\Run\ /v OneDriveSetup /f
+
 Import-Module $env:appdata\boxstarter\boxstarter.chocolatey\boxstarter.chocolatey.psd1
 
 (new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/boxStarterWinUpdate.ps1','c:\boxStarterWinUpdate.ps1')

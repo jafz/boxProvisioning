@@ -1,7 +1,7 @@
 # Boxstarter options
-$Boxstarter.RebootOk=$true # Allow reboots?
-$Boxstarter.NoPassword=$false # Is this a machine with no login password?
-$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+#$Boxstarter.RebootOk=$true # Allow reboots?
+#$Boxstarter.NoPassword=$false # Is this a machine with no login password?
+#$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
 # Basic setup
 # Update-ExecutionPolicy Unrestricted # that's win2012 and so?
@@ -11,30 +11,29 @@ Disable-InternetExplorerESC
 Disable-UAC
 
 
-if (Test-PendingReboot) { Invoke-Reboot }
+#if (Test-PendingReboot) { Invoke-Reboot }
 
 # Update Windows and reboot if necessary
 Install-WindowsUpdate -AcceptEula
-if (Test-PendingReboot) { Invoke-Reboot }
+#if (Test-PendingReboot) { Invoke-Reboot }
 
 # Install Visual Studio 2013 Professional 
 # cinst visualstudio2013ultimate
 # if (Test-PendingReboot) { Invoke-Reboot }
 
-cinst visualstudio2017enterprise /y
-if (Test-PendingReboot) { Invoke-Reboot }
-cinst vswhere /y
+cinst visualstudio2017enterprise
+cinst vswhere
 
-cinst resharper-platform /y
-cinst git.install /y
-cinst sourcetree /y
-cinst tortoisegit /y
-cinst tortoisesvn /y
-if (Test-PendingReboot) { Invoke-Reboot }
+cinst resharper-platform
+cinst git.install
+cinst sourcetree
+cinst tortoisegit
+cinst tortoisesvn
+# if (Test-PendingReboot) { Invoke-Reboot }
 
-cinst atom /y
-cinst cmder /y
-cinst baretail /y
+cinst atom
+cinst cmder
+cinst baretail
 
 # VS extensions
 # Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/112013/6/PowerShellTools.vsix
@@ -46,21 +45,21 @@ cinst baretail /y
 # Install-ChocolateyVsixPackage AwsToolkit http://visualstudiogallery.msdn.microsoft.com/175787af-a563-4306-957b-686b4ee9b497
 
 #Other dev tools
-cinst fiddler4 /y
-cinst notepadpluslus.install /y
-cinst beyondcompare /y
-cinst sysinternals /y
-cinst NugetPackageExplorer /y
-cinst windbg /y
+cinst fiddler4
+cinst notepadplusplus.install
+cinst beyondcompare
+cinst sysinternals
+cinst NugetPackageExplorer
+cinst windbg
 # cinstm Devbox-Clink
 # cinstm TortoiseHg
 #cinstm VisualHG # Chocolatey package is corrupt as of Feb 2014 
 
 #Browsers
-cinst googlechrome /y
-cinst firefox /y
+cinst googlechrome
+cinst firefox
 
 #Other essential tools
-cinst 7zip /y
-cinst nitroreader.install /y
-cinst javaruntime /y
+cinst 7zip
+cinst nitroreader.install
+cinst javaruntime

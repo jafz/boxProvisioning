@@ -18,23 +18,23 @@ Install-WindowsUpdate -AcceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
 # Install Visual Studio 2013 Professional 
-# cinstm visualstudio2013ultimate
+# cinst visualstudio2013ultimate
 # if (Test-PendingReboot) { Invoke-Reboot }
 
-cinstm visualstudio2017enterprise
+cinst visualstudio2017enterprise /y
 if (Test-PendingReboot) { Invoke-Reboot }
-cinstm vswhere
+cinst vswhere /y
 
-cinstm resharper-platform
-cinstm git.install
-cinstm sourcetree
-cinstm tortoisegit
-cinstm tortoisesvn
+cinst resharper-platform /y
+cinst git.install /y
+cinst sourcetree /y
+cinst tortoisegit /y
+cinst tortoisesvn /y
 if (Test-PendingReboot) { Invoke-Reboot }
 
-cinstm atom
-cinstm cmder
-cinstm baretail
+cinst atom /y
+cinst cmder /y
+cinst baretail /y
 
 # VS extensions
 # Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/112013/6/PowerShellTools.vsix
@@ -46,21 +46,21 @@ cinstm baretail
 # Install-ChocolateyVsixPackage AwsToolkit http://visualstudiogallery.msdn.microsoft.com/175787af-a563-4306-957b-686b4ee9b497
 
 #Other dev tools
-cinstm fiddler4
-cinstm notepadpluslus.install
-cinstm beyondcompare
-cinstm sysinternals
-cinstm NugetPackageExplorer
-cinstm windbg
+cinst fiddler4 /y
+cinst notepadpluslus.install /y
+cinst beyondcompare /y
+cinst sysinternals /y
+cinst NugetPackageExplorer /y
+cinst windbg /y
 # cinstm Devbox-Clink
 # cinstm TortoiseHg
 #cinstm VisualHG # Chocolatey package is corrupt as of Feb 2014 
 
 #Browsers
-cinstm googlechrome
-cinstm firefox
+cinst googlechrome /y
+cinst firefox /y
 
 #Other essential tools
-cinstm 7zip
-cinstm nitroreader.install
-cinstm javaruntime
+cinst 7zip /y
+cinst nitroreader.install /y
+cinst javaruntime /y

@@ -8,6 +8,11 @@ netsh advfirewall firewall add rule name="Remote Desktop" dir=in localport=3389 
 
 Import-Module $env:appdata\boxstarter\boxstarter.chocolatey\boxstarter.chocolatey.psd1
 
-#(new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/boxPack.ps1','c:\boxPack.ps1')
+(new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/boxStarterWinUpdate.ps1','c:\boxStarterWinUpdate.ps1')
+New-PackageFromScript c:\boxStarterWinUpdate.ps1 winUpdatePkg
+(new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/boxStarterVs2017.ps1','c:\boxStarterVs2017.ps1')
+New-PackageFromScript c:\boxStarterVs2017.ps1 vs2017Pkg
+(new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/boxStarterVarious.ps1','c:\boxStarterVarious.ps1')
+New-PackageFromScript c:\boxStarterVarious.ps1 variousPkg
 $cred=Get-Credential
-Install-BoxstarterPackage -PackageName https://github.com/jafz/boxProvisioning/raw/master/boxPack.ps1 -Credential $cred
+Install-BoxstarterPackage -PackageName winUpdatePkg -Credential $cred

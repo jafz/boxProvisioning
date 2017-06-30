@@ -15,9 +15,9 @@ if (Test-PendingReboot) { Invoke-Reboot }
 Install-WindowsUpdate -AcceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
-cinstm baretail
+cinst baretail
 
-cinstm notepadpluslus.install
-cinstm googlechrome
+cinst notepadpluslus.install
+cinst googlechrome
 
-cinstm 7zip
+cinst 7zip

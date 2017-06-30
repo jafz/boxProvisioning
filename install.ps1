@@ -1,3 +1,4 @@
+# set-executionpolicy unrestricted -force && (new-object net.webclient).DownloadFile('https://github.com/jafz/boxProvisioning/raw/master/install.ps1','c:\install.ps1') && .\install.ps1
 
 . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
 Enable-RemoteDesktop

@@ -1,3 +1,8 @@
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+Disable-InternetExplorerESC
+Disable-UAC
 
-Write-Host "Here are the top 10 CPU consuming processes right now"
-Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
+
+cinst baretail
+Install-WindowsUpdate -AcceptEula

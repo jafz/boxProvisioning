@@ -17,6 +17,7 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst baretail
 
 cinst notepadplusplus.install
+cinst notepad2
 cinst googlechrome
 
 cinst 7zip

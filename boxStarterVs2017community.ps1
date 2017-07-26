@@ -1,0 +1,2 @@
+cinst visualstudio2017community
+cinst vswhere

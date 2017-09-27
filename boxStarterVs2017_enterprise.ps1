@@ -1,0 +1,8 @@
+cinst visualstudio2017enterprise
+cinst vswhere
+cinst visualstudio2017-workload-data
+cinst visualstudio2017-workload-azure
+cinst visualstudio2017-workload-manageddesktop
+cinst visualstudio2017-workload-nativedesktop
+cinst visualstudio2017-workload-netweb
+cinst visualstudio2017-workload-node

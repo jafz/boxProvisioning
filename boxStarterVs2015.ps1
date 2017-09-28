@@ -1,1 +1,1 @@
-choco install VisualStudio2015Enterprise -packageParameters "--AdminFile https://github.com/jafz/boxProvisioning/raw/master/vs2015_AdminDeployment.xml"
+choco install VisualStudio2015Enterprise -packageParameters "--AdminFile https://github.com/jafz/boxProvisioning/raw/master/AdminDeployment.xml"

@@ -9,3 +9,5 @@ Enable-RemoteDesktop
 Import-Module $env:appdata\boxstarter\boxstarter.chocolatey\boxstarter.chocolatey.psd1
 
 $cred=Get-Credential
+
+Install-BoxstarterPackage -PackageName https://github.com/jafz/boxProvisioning/raw/master/server.ps1 -Credential $cred

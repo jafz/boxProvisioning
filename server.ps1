@@ -3,12 +3,8 @@ Enable-RemoteDesktop
 Disable-InternetExplorerESC
 Disable-UAC
 
+Enable-NetFirewallRule -DisplayGroup "File and Printer Sharing"
 
-Install-WindowsUpdate -AcceptEula
-
-cinst baretail
-cinst atom
-cinst cmder
 cinst baretail
 cinst googlechrome
-cinst firefox
+cinst notepadplusplus

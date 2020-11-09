@@ -6,7 +6,7 @@
 Enable-RemoteDesktop
 Disable-InternetExplorerESC
 Disable-UAC
-Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Set-WindowsExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 
 Enable-PSRemoting -Force
 cinst googlechrome -y
